@@ -5,20 +5,13 @@
  * Date: 2016-02-11
  * Time: 7:53 PM
  *
- * Page used to view the selected video, video is specified by $_Get['vid'] param, and $_Get['type']
+ * Page used to view the selected video, video is specified by $_Get['vid'] param
  */
 include_once("page_header.php");
 require_once("config.php");
 
-require_once("movies.php");
-require_once("shows.php");
+echo '<video width="1280" height="720" controls>';
+echo '<source src="'. urldecode($_GET['vid']) .'" type="video/mp4">';
+echo '</video>';
 
-//possible logic to reduce the
-//if ($_GET['type'] == "movie") {
-//    require_once("movies.php");
-//} elseif ($_GET['type'] == "tv") {
-//    require_once("shows.php");
-//} else {
-//    require_once("movies.php");
-//    require_once("shows.php");
-//}
+include_once("footer.html");

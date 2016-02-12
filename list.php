@@ -9,12 +9,15 @@
  */
 include_once("page_header.php");
 require_once("config.php");
+if (isset($_GET['i'])) {
+    if ($_GET['i'] == "movies") {
+        require_once("movies.php");
 
-if ($_GET['i'] == "movies") {
-    require_once("movies.php");
-
-} elseif ($_GET['i'] == "tv") {
-    require_once("shows.php");
+    } elseif ($_GET['i'] == "tv") {
+        require_once("shows.php");
+    }
 } else {
     echo "nothing specified";
 }
+
+include_once("footer.html");

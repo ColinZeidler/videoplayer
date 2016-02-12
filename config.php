@@ -17,10 +17,10 @@ $ini_file = file("config.ini");
 foreach ($ini_file as $line) {
     $parts = explode("=", $line);
     if ($parts[0] == "movie_path") {
-        $movie_location = $parts[1];
+        $movie_location = rtrim($parts[1]);
     } elseif ($parts[0] == "tv_path") {
-        $tv_location = $parts[1];
+        $tv_location = rtrim($parts[1]);
     } elseif ($parts[0] == "site_name") {
-        $site_name = $parts[1];
+        $site_name = rtrim($parts[1]);
     }
 }

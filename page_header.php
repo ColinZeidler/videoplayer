@@ -8,6 +8,7 @@
  * Create the header and Nav bar for all pages
  */
 include_once("config.php");
+// TODO add some CSS
 ?>
 <!DOCTYPE html>
 <HTML>
@@ -17,4 +18,7 @@ include_once("config.php");
         <title><?php echo $site_name; ?></title>
     </head>
     <body>
-        <nav id="header_nav"><h1><?php echo $site_name; ?></h1></nav>
+        <nav id="header_nav"><b><?php echo $site_name; ?></b>
+            <a href="list.php?i=tv">tv listing</a>
+            <a href="list.php?i=movies">movie listing</a>
+        </nav>
