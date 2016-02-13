@@ -8,7 +8,8 @@
  * Lists the movies or tv shows depending on $_Get['i'] param
  */
 include_once("page_header.php");
-require_once("config.php");
+require_once("functions.php");
+
 if (isset($_GET['i'])) {
     if ($_GET['i'] == "movies") {
         require_once("movies.php");
