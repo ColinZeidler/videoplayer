@@ -19,6 +19,23 @@ nav a:hover {
     background-color: #1c73d6;
 }
 
+form#search {
+    display: inline;
+    margin-right: 0;
+    margin-left: auto;
+    vertical-align: top;
+    float: right;
+}
+
+input#s_img {
+    height: 23px;
+    width: 23px;
+    vertical-align: top;
+    background: dodgerblue url(images/searchimg.png);
+    background-size: 23px;
+    border: none;
+}
+
 body {
     margin: 0;
 }
