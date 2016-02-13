@@ -7,11 +7,10 @@
  *
  * Builds the list of Movies
  */
-require_once("config.php");
+require_once("functions.php");
 
-$movies = get_media($movie_location, '.mp4');
+$movies = get_movies();
 echo sizeof($movies) . " movies"  . "<br/>";
 foreach ($movies as $movie) {
-    echo '<a href="watch.php?vid=', urlencode($movie), '">' . strip_path($movie) . '</a><br/>';
-
+    print_movie($movie);
 }

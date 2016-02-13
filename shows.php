@@ -7,18 +7,7 @@
  *
  * builds the list of TV Shows
  */
-
-require_once("config.php");
-require_once("list.php");
-
-function get_shows() {
-    /**
-     * returns a list of shows from the configured show location
-     */
-    global $tv_location;
-    $shows = array_filter(get_media($tv_location), 'is_dir');
-    return $shows;
-}
+require_once("functions.php");
 
 if (isset($_GET['show']) && ! empty($_GET['show'])) {
     $episodes = get_media(urldecode($_GET['show']), '.mp4');
@@ -30,6 +19,6 @@ if (isset($_GET['show']) && ! empty($_GET['show'])) {
     $shows = get_shows();
     echo sizeof($shows) . " shows<br/>";
     foreach ($shows as $show) {
-        echo '<a href="list.php?i=tv&show=' . urlencode($show) . '">' . strip_path($show). '</a><br/>';
+        print_show($show);
     }
 }
