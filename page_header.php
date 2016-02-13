@@ -16,9 +16,11 @@ include_once("config.php");
     <head lang="en">
         <meta charset="UTF-8">
         <title><?php echo $site_name; ?></title>
+        <link rel="stylesheet" type="text/css" href="main.css">
     </head>
     <body>
         <nav id="header_nav"><b><?php echo $site_name; ?></b>
             <a href="list.php?i=tv">tv listing</a>
             <a href="list.php?i=movies">movie listing</a>
         </nav>
+        <div class="content">
