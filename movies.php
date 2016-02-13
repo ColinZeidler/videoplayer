@@ -9,19 +9,9 @@
  */
 require_once("config.php");
 
-function get_movies() {
-    /**
-     * return a list of movies based on the configured movie path
-     */
-    global $movie_location;
-    echo "reading movies from: " . $movie_location ."<br/>";
-    $eps = glob($movie_location .'/*.mp4');
-    return $eps;
-}
-
-$movies = get_movies();
+$movies = get_media($movie_location, '.mp4');
 echo sizeof($movies) . " movies"  . "<br/>";
 foreach ($movies as $movie) {
-    echo '<a href="watch.php?vid=', urlencode($movie), '">' . $movie . '</a><br/>';
+    echo '<a href="watch.php?vid=', urlencode($movie), '">' . strip_path($movie) . '</a><br/>';
 
 }
