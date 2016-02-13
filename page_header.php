@@ -8,7 +8,6 @@
  * Create the header and Nav bar for all pages
  */
 include_once("config.php");
-// TODO add some CSS
 ?>
 <!DOCTYPE html>
 <HTML>

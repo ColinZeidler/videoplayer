@@ -31,6 +31,5 @@ if (isset($_GET['show']) && ! empty($_GET['show'])) {
     echo sizeof($shows) . " shows<br/>";
     foreach ($shows as $show) {
         echo '<a href="list.php?i=tv&show=' . urlencode($show) . '">' . strip_path($show). '</a><br/>';
-        // TODO echo actual useful HTML links
     }
 }
