@@ -7,11 +7,11 @@
  *
  * Page used to view the selected video, video is specified by $_Get['vid'] param
  */
-include_once("page_header.php");
-require_once("config.php");
+include_once("includes/page_header.php");
+require_once("includes/config.php");
 
 echo '<video width="1280" height="720" controls>';
 echo '<source src="'. urldecode($_GET['vid']) .'" type="video/mp4">';
 echo '</video>';
 
-include_once("footer.html");
+include_once("includes/footer.html");

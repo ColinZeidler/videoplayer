@@ -31,7 +31,7 @@ input#s_img {
     height: 23px;
     width: 23px;
     vertical-align: top;
-    background: dodgerblue url(images/searchimg.png);
+    background: dodgerblue url(../images/searchimg.png);
     background-size: 23px;
     border: none;
 }

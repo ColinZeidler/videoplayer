@@ -7,18 +7,19 @@
  *
  * Lists the movies or tv shows depending on $_Get['i'] param
  */
-include_once("page_header.php");
-require_once("functions.php");
+include_once("includes/page_header.php");
+require_once ("includes/config.php");
+require_once("includes/functions.php");
 
 if (isset($_GET['i'])) {
     if ($_GET['i'] == "movies") {
-        require_once("movies.php");
+        require_once("includes/movies.php");
 
     } elseif ($_GET['i'] == "tv") {
-        require_once("shows.php");
+        require_once("includes/shows.php");
     }
 } else {
     echo "nothing specified";
 }
 
-include_once("footer.html");
+include_once("includes/footer.html");

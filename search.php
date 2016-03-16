@@ -6,8 +6,9 @@
  * Time: 9:19 PM
  */
 
-include_once("page_header.php");
-require_once("functions.php");
+require_once ("includes/config.php");
+include_once("includes/page_header.php");
+require_once("includes/functions.php");
 
 $movie_array = get_movies();
 $show_array = get_shows();
@@ -38,3 +39,5 @@ if (sizeof($show_array) > 0) {
         print_show($show);
     }
 }
+
+include_once("includes/footer.html");

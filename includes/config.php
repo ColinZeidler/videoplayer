@@ -12,7 +12,7 @@ $movie_location = "Movies";
 $tv_location = "TV Shows";
 $site_name = "Video Player";
 
-$ini_file = file("config.ini");
+$ini_file = file("includes/config.ini");
 
 foreach ($ini_file as $line) {
     $parts = explode("=", $line);

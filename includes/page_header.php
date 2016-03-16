@@ -7,7 +7,7 @@
  *
  * Create the header and Nav bar for all pages
  */
-include_once("config.php");
+include_once("includes/config.php");
 ?>
 <!DOCTYPE html>
 <HTML>
@@ -15,7 +15,7 @@ include_once("config.php");
     <head lang="en">
         <meta charset="UTF-8">
         <title><?php echo $site_name; ?></title>
-        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
     <body>
         <nav id="header_nav">
